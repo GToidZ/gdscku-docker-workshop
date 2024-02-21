@@ -35,16 +35,16 @@ In order to see if our network works properly, we shall be using two PostgreSQL 
 1. We'll start by spinning up two containers of PostgreSQL. **We need to also name those containers as they're used for default hostnames.**
    
    ```sh
-   $ docker run --rm -d --name gdscdb --network <network-name> -p 5432 postgres:latest
+   $ docker run --rm -d --name gdscdb --network <network-name> -e POSTGRES_PASSWORD=1234 -p 5432 postgres:latest
 
-   $ docker run --rm -d --name kudb --network <network-name> -p 5432 postgres:latest
+   $ docker run --rm -d --name kudb --network <network-name> -e POSTGRES_PASSWORD=1234 -p 5432 postgres:latest
    ```
 
 2. We can now try to use one container to communicate to another. Let's try using `gdscdb`!
 
    ```sh
    $ docker exec -it gdscdb /bin/bash
-   root@...> psql -U postgres -h kudb
+   root@...> psql -U postgres -h kudb -p
    ```
 
    If `psql` can be launched, the network is working great!
