@@ -20,7 +20,7 @@ The way to persist data from Docker, is to use Volumes.
    
    ```sh
    $ docker exec -it <container-id> /bin/bash
-   root@...> vi /usr/local/apache2/htdocs/public-html/index.html
+   root@...> vi /usr/local/apache2/htdocs/index.html
    root@...> exit
    ```
 
