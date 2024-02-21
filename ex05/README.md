@@ -44,7 +44,7 @@ In order to see if our network works properly, we shall be using two PostgreSQL 
 
    ```sh
    $ docker exec -it gdscdb /bin/bash
-   root@...> psql -U postgres -h kudb -p
+   root@...> psql -U postgres -h kudb
    ```
 
    If `psql` can be launched, the network is working great!
