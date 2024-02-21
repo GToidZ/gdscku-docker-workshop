@@ -54,7 +54,7 @@ In this exercise, let's try running a HTTP server with an HTML page.
    To open ports when running the container we can use, `-p <host port>:<container port>`
 
    ```sh
-   docker run -d -p --rm 8080:80 gdscku/web-example
+   docker run -d --rm -p 8080:80 gdscku/web-example
    ```
 
    Then, you can open the site on `http://localhost:8080`
