@@ -28,7 +28,7 @@ The way to persist data from Docker, is to use Volumes.
 
 3. Stop the container with `docker stop <container-id>`
 
-4. Re-run the container with `docker run -d -p --rm 8080:80 <image>`
+4. Re-run the container with `docker run -d --rm -p 8080:80 <image>`
 
 ## Creating and using a volume
 
