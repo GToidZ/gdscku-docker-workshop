@@ -15,7 +15,7 @@ However in some cases like Ubuntu or Linux images, we might want to save changes
 1. Let's try adding a new package to our container, spin up a new Ubuntu container:
    
    ```sh
-   $ docker run ubuntu -it /bin/bash
+   $ docker run -it ubuntu /bin/bash
    root@f29e415b> apt update && apt install -y cowsay
    root@f29e415b> cowsay Hello World!
    ```
