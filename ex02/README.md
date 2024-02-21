@@ -35,5 +35,5 @@ However in some cases like Ubuntu or Linux images, we might want to save changes
 3. Finally, we can run our new image and use the `cowsay` command without needing to installing it with `apt`:
    
    ```sh
-   docker run -it --rm gdscku/cowsay /bin/cowsay Hello Again!
+   docker run -it --rm gdscku/cowsay /usr/games/cowsay Hello Again!
    ```
