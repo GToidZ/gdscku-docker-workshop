@@ -17,7 +17,7 @@ However in some cases like Ubuntu or Linux images, we might want to save changes
    ```sh
    $ docker run -it ubuntu /bin/bash
    root@f29e415b> apt update && apt install -y cowsay
-   root@f29e415b> cowsay Hello World!
+   root@f29e415b> /usr/games/cowsay Hello World!
    ```
 
 2. We can commit changes of adding the `cowsay` package by using `docker commit`, however make sure that you're not starting the container again.
