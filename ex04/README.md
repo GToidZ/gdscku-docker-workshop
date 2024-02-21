@@ -50,7 +50,9 @@ Once you revisit the page, you can see that your contents has been overridden by
 3. Now, we can attach our volume to the new container runs.
    
    ```sh
-   docker run --rm -d -p 8080:80 -v <volume-name>:/usr/local/apache2/htdocs/ <image>
+   docker run --rm -d -p 8080:80 -v ./public-html/:/usr/local/apache2/htdocs/ <image>
    ```
 
 4. Then we can [test out the theory](#testing-the-theory) to see, whether our changes are saved across container runs.
+
+Note: due to how the Dockerfile works mounting anonymous volume won't work, since the file is copied again.
